@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Downloader No Watermark</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Download video TikTok tanpa watermark secara gratis">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 TikTok Downloader</h1>
+            <p class="subtitle">Download video TikTok tanpa watermark - Gratis & Cepat</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="tiktokUrl" 
+                        placeholder="Tempel link TikTok di sini... Contoh: https://www.tiktok.com/@user/video/123456789" 
+                        autocomplete="off"
+                    >
+                    <button id="downloadBtn" onclick="downloadVideo()">
+                        <span class="btn-text">Download</span>
+                        <span class="btn-loading hidden">Memproses...</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Sedang memproses video TikTok...</p>
+            </div>
+
+            <div id="error" class="error hidden">
+                <div class="error-icon">⚠️</div>
+                <p id="errorMessage"></p>
+            </div>
+
+            <div id="result" class="result hidden">
+                <div class="success-message">
+                    <h3>✅ Berhasil! Video siap didownload</h3>
+                </div>
+                
+                <div class="video-preview">
+                    <video id="videoPlayer" controls poster="">
+                        Browser Anda tidak mendukung pemutar video.
+                    </video>
+                </div>
+
+                <div class="video-info">
+                    <h4>Informasi Video:</h4>
+                    <p id="videoTitle">-</p>
+                    <p id="videoAuthor">-</p>
+                </div>
+
+                <div class="download-options">
+                    <button id="downloadVideoBtn" class="download-btn video-btn">
+                        <span>📥 Download Video</span>
+                        <small>MP4 - No Watermark</small>
+                    </button>
+                    <button id="downloadAudioBtn" class="download-btn audio-btn">
+                        <span>🎵 Download Audio</span>
+                        <small>MP3 - Sound Only</small>
+                    </button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>📝 Cara Menggunakan:</h3>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Buka aplikasi TikTok dan copy link video</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Tempel link di kolom atas</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Klik tombol Download</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p>Download video/audio tanpa watermark</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 TikTok Downloader. Untuk penggunaan pribadi.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
